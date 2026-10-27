@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMKN 1 KRAS - Portal Resmi Kelas XI TKJ 1 (Cyber Class)</title>
+
+    <meta name="description" content="Website resmi kelas XI TKJ 1 SMKN 1 Kras, Kediri, Jawa Timur. Informasi kelas, bio anggota, jadwal pelajaran, galeri, dan pemutar audio pembelajaran.">
+    <meta name="keywords" content="SMKN 1 Kras, XI TKJ 1, Teknik Komputer dan Jaringan, Kediri, Cyber Class, Sekolah Vokasi">
+    <meta name="author" content="Moh Dzul Fiqri A.B - XI TKJ 1 SMKN 1 Kras">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo-smkn1kras.png">
+
+    <!-- Fonts: Inter (Official SMKN 1 Kras Typography) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Custom Style Sheet (SMKN 1 Kras Design System) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         TOP BAR (Kontak & Status Akreditasi)
+    ========================================== -->
+    <div class="top-bar d-none d-md-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <span class="top-bar-item">
+                    <span class="top-bar-badge"><i class="fa-solid fa-award me-1"></i>AKREDITASI A</span>
+                </span>
+                <span class="top-bar-item">
+                    <i class="fa-solid fa-school text-info"></i> NPSN: 69775452
+                </span>
+                <span class="top-bar-item">
+                    <i class="fa-solid fa-location-dot text-danger"></i> Kras, Kab. Kediri, Jawa Timur
+                </span>
+            </div>
+            <div class="d-flex align-items-center">
+                <span class="top-bar-item">
+                    <i class="fa-solid fa-envelope text-warning"></i> info@smkn1kras.sch.id
+                </span>
+                <span class="top-bar-item me-0">
+                    <i class="fa-solid fa-code text-primary"></i> Cyber Class XI TKJ 1
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         NAVBAR RESMI (Fixed & Modern)
+    ========================================== -->
+    <nav class="navbar navbar-expand-lg navbar-modern sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <img src="assets/logo-smkn1kras.png" alt="Logo SMKN 1 Kras" class="navbar-brand-logo" onerror="this.src='https://smknegeri1kras.sch.id/uploads/logo-sekolah.png'">
+                <div class="navbar-brand-text">
+                    <span class="navbar-brand-title">SMKN 1 KRAS</span>
+                    <span class="navbar-brand-sub">XI TKJ 1 · CYBER CLASS</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars text-primary fs-4"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home"><i class="fa-solid fa-house"></i> Beranda</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-school"></i> Profil
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#sambutan"><i class="fa-solid fa-user-tie"></i> Sambutan Kepala Sekolah</a></li>
+                            <li><a class="dropdown-item" href="#jurusan"><i class="fa-solid fa-graduation-cap"></i> Program Keahlian</a></li>
+                            <li><a class="dropdown-item" href="#about"><i class="fa-solid fa-network-wired"></i> Tentang XI TKJ 1</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#jurusan"><i class="fa-solid fa-laptop-code"></i> Kejuruan</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#members"><i class="fa-solid fa-users"></i> Anggota</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#schedule"><i class="fa-solid fa-calendar-days"></i> Jadwal</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery"><i class="fa-solid fa-images"></i> Galeri</a>
+                    </li>
+
+                    <!-- PORTAL LOGIN ACCOUNT DROPDOWN -->
+                    <li class="nav-item dropdown ms-lg-2 mt-2 mt-lg-0">
+                        <a class="nav-link nav-auth-btn dropdown-toggle" href="#" id="authDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-circle-user"></i>
+                            <span id="authUserName">Portal Login</span>
+                            <span id="authUserRoleBadge" class="badge bg-light text-primary ms-1" style="display:none;font-size:0.65rem;"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="authDropdown">
+                            <li class="px-3 py-2 text-muted small border-bottom">
+                                <i class="fa-solid fa-shield-halved text-primary me-1"></i>
+                                <b>AUTENTIKASI SEKOLAH</b>
+                            </li>
+                            <li id="authLoginLink">
+                                <a class="dropdown-item py-2" href="portal.html?role=student">
+                                    <i class="fa-solid fa-user-graduate text-primary"></i>
+                                    <div>
+                                        <div class="fw-bold text-dark">Login sebagai SISWA</div>
+                                        <small class="text-muted">Akses bio profil anggota kelas</small>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item py-2" href="portal.html?role=admin">
+                                    <i class="fa-solid fa-shield text-danger"></i>
+                                    <div>
+                                        <div class="fw-bold text-dark">Login sebagai ADMIN</div>
+                                        <small class="text-muted">Akses pengelola sistem</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <button type="button" class="dropdown-item text-danger py-2" id="logoutBtn" hidden>
+                                    <i class="fa-solid fa-right-from-bracket text-danger"></i>
+                                    <b>Keluar dari Akun</b>
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         HERO SLIDER (Carousel Utama Sekolah)
+    ========================================== -->
+    <header class="hero-section" id="home">
+        <div class="hero-slider">
+            <!-- SLIDE 1 -->
+            <div class="hero-slide active" style="background-image: url('assets/hero-slider-1.webp');">
+                <div class="hero-overlay"></div>
+                <div class="container h-100 d-flex align-items-center">
+                    <div class="hero-content">
+                        <div class="hero-eyebrow">
+                            <i class="fa-solid fa-school"></i> SMK Negeri 1 Kras Kediri
+                        </div>
+                        <h1 class="hero-title">
+                            Selamat Datang di <span>XI TKJ 1</span>
+                        </h1>
+                        <p class="hero-desc">
+                            Technical Computer &amp; Networking. Wadah generasi cerdas, berkarakter, inovatif, dan siap kerja di era transformasi digital dan keamanan siber.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#members" class="btn-hero-primary">
+                                <i class="fa-solid fa-users"></i> Lihat Anggota Kelas
+                            </a>
+                            <a href="#schedule" class="btn-hero-outline">
+                                <i class="fa-solid fa-calendar-check"></i> Jadwal Pelajaran
+                            </a>
+                            <a href="portal.html?role=student" class="btn-hero-outline">
+                                <i class="fa-solid fa-key"></i> Portal Siswa
+                            </a>
+                        </div>
+                        <div class="hero-stats-row">
+                            <div class="hero-stat-card">
+                                <i class="fa-solid fa-user-group"></i>
+                                <div>
+                                    <strong data-counter-target="36" data-counter-suffix="">36</strong>
+                                    <span>Siswa Aktif</span>
+                                </div>
+                            </div>
+                            <div class="hero-stat-card">
+                                <i class="fa-solid fa-network-wired"></i>
+                                <div>
+                                    <strong>TKJ</strong>
+                                    <span>Jurusan Unggulan</span>
+                                </div>
+                            </div>
+                            <div class="hero-stat-card">
+                                <i class="fa-solid fa-certificate"></i>
+                                <div>
+                                    <strong>A</strong>
+                                    <span>Akreditasi Sekolah</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="hero-slide" style="background-image: url('assets/hero-slider-2.webp');">
+                <div class="hero-overlay"></div>
+                <div class="container h-100 d-flex align-items-center">
+                    <div class="hero-content">
+                        <div class="hero-eyebrow">
+                            <i class="fa-solid fa-satellite-dish"></i> Kejuruan Berbasis Industri
+                        </div>
+                        <h1 class="hero-title">
+                            Pendidikan <span>Vokasi Unggul</span>
+                        </h1>
+                        <p class="hero-desc">
+                            Mempelajari instalasi kabel &amp; nirkabel, administrasi server Debian, router MikroTik, routing Cisco, cyber security, hingga pemrograman aplikasi web modern.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#jurusan" class="btn-hero-primary">
+                                <i class="fa-solid fa-book-open"></i> Kurikulum TKJ
+                            </a>
+                            <a href="#gallery" class="btn-hero-outline">
+                                <i class="fa-solid fa-images"></i> Galeri Praktikum
+                            </a>
+                        </div>
+                        <div class="hero-stats-row">
+                            <div class="hero-stat-card">
+                                <i class="fa-solid fa-server"></i>
+                                <div>
+                                    <strong>100%</strong>
+                                    <span>Praktik &amp; Teori</span>
+                                </div>
+                            </div>
+                            <div class="hero-stat-card">
+                                <i class="fa-solid fa-briefcase"></i>
+                                <div>
+                                    <strong>LINK &amp; MATCH</strong>
+                                    <span>Dunia Industri</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 3 -->
+            <div class="hero-slide" style="background-image: url('assets/hero-slider-1.webp');">
+                <div class="hero-overlay"></div>
+                <div class="container h-100 d-flex align-items-center">
+                    <div class="hero-content">
+                        <div class="hero-eyebrow">
+                            <i class="fa-solid fa-handshake-angle"></i> Program MOVE SMKN 1 Kras
+                        </div>
+                        <h1 class="hero-title">
+                            Pengabdian &amp; <span>Inovasi Siswa</span>
+                        </h1>
+                        <p class="hero-desc">
+                            Satu jaringan, satu tujuan, satu rasa. Bersama menghadirkan kontribusi positif bagi masyarakat dan memajukan teknologi di lingkungan SMK Negeri 1 Kras Kediri.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#about" class="btn-hero-primary">
+                                <i class="fa-solid fa-compass"></i> Profil Kelas
+                            </a>
+                            <a href="#members" class="btn-hero-outline">
+                                <i class="fa-solid fa-users-gear"></i> Tim IT Kelas
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDER CONTROLS -->
+        <button class="hero-nav-btn hero-nav-prev" type="button" aria-label="Slide sebelumnya">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="hero-nav-btn hero-nav-next" type="button" aria-label="Slide berikutnya">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <div class="hero-dots">
+            <span class="hero-dot active"></span>
+            <span class="hero-dot"></span>
+            <span class="hero-dot"></span>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         INTERACTIVE LIVE JAM PELAJARAN WIDGET
+         (Exact logic from smknegeri1kras.sch.id)
+    ========================================== -->
+    <section class="jp-live-bar" aria-label="Jadwal Pelajaran Realtime">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+                <!-- Kiri: Jam Digital & Hari -->
+                <div class="d-flex align-items-center gap-3">
+                    <div class="jp-time-badge">
+                        <i class="fa-solid fa-clock jp-clock-icon"></i>
+                        <span id="jp-jam-sekarang" class="jp-clock-digits">--:--:--</span>
+                    </div>
+                    <div>
+                        <div class="jp-day-label-small">WAKTU AKTIF</div>
+                        <div id="jp-hari-label" class="jp-day-name">Memuat jadwal...</div>
+                    </div>
+                </div>
+
+                <!-- Tengah: Status Jam Ke Berapa -->
+                <div class="text-center flex-grow-1 px-2" style="min-width: 220px;">
+                    <div id="jp-status-text" class="jp-status-title">MEMUAT STATUS...</div>
+                    <div id="jp-detail-text" class="jp-status-desc">Menghubungkan ke sistem jadwal SMKN 1 Kras</div>
+                </div>
+
+                <!-- Kanan: Sisa Waktu & Progress Bar -->
+                <div class="text-end" style="min-width: 170px;">
+                    <div id="jp-senin-toggle" style="display:none;margin-bottom:4px;">
+                        <button onclick="jpToggleSenin()" id="jp-btn-toggle" class="jp-toggle-btn" type="button">
+                            <i class="fa-solid fa-flag me-1"></i><span id="jp-toggle-label">Ada Upacara</span>
+                        </button>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-end gap-2">
+                        <span style="font-size:0.75rem;color:rgba(255,255,255,0.7);font-weight:600;">SISA WAKTU:</span>
+                        <span id="jp-countdown" class="jp-countdown-val">--:--</span>
+                    </div>
+                    <div class="jp-progress-track">
+                        <div id="jp-progress" class="jp-progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- ==========================================
+             SAMBUTAN KEPALA SEKOLAH & WALI KELAS
+        ========================================== -->
+        <section class="section-wrap section-bg-light" id="sambutan">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow"><i class="fa-solid fa-graduation-cap"></i> KEPEMIMPINAN SEKOLAH</span>
+                    <h2 class="section-title">Sambutan <span>Kepala Sekolah</span></h2>
+                    <p class="section-sub">Komitmen mencetak generasi vokasi yang unggul, berakhlak mulia, dan kompeten di bidang teknologi komputer dan jaringan.</p>
+                </div>
+
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-12">
+                        <div class="sambutan-card">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-md-4 col-lg-3">
+                                    <div class="sambutan-img-wrap">
+                                        <img src="assets/logo-smkn1kras.png" alt="Ibu Anik Safitri Budiarti, S.Pd." class="p-4" onerror="this.src='https://smknegeri1kras.sch.id/uploads/logo-sekolah.png'">
+                                        <div class="sambutan-badge">
+                                            <strong>Kepala Sekolah</strong><br>
+                                            <small>SMKN 1 Kras</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-lg-9">
+                                    <div class="sambutan-body">
+                                        <i class="fa-solid fa-quote-left sambutan-quote-icon"></i>
+                                        <p class="sambutan-text">
+                                            "Puji syukur ke hadirat Tuhan Yang Maha Esa atas kemajuan dan dedikasi seluruh civitas akademika <b>SMK Negeri 1 Kras Kabupaten Kediri</b>. Melalui pembelajaran vokasi yang terintegrasi dengan teknologi modern serta kurikulum industri, kami bertekad menghantarkan peserta didik menjadi lulusan yang tangguh, terampil, disiplin, dan mampu beradaptasi cepat dengan kebutuhan dunia kerja nasional maupun internasional.
+                                            <br><br>
+                                            Kelas <b>XI TKJ 1 (Cyber Class)</b> merupakan salah satu cerminan nyata semangat inovasi dan kreativitas siswa kami dalam menguasai jaringan komputer, pemrograman, dan tata kelola teknologi informasi. Teruslah berkarya dan raih masa depan gemilang!"
+                                        </p>
+                                        <h3 class="sambutan-name">Anik Safitri Budiarti, S.Pd.</h3>
+                                        <p class="sambutan-role"><i class="fa-solid fa-shield-halved me-1"></i> Kepala SMK Negeri 1 Kras</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PROGRAM KEAHLIAN (SMKN 1 Kras Jurusan)
+        ========================================== -->
+        <section class="section-wrap section-bg-white" id="jurusan">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow"><i class="fa-solid fa-layer-group"></i> KOMPETENSI KEAHLIAN</span>
+                    <h2 class="section-title">Program Keahlian <span>SMKN 1 Kras</span></h2>
+                    <p class="section-sub">Mempersiapkan siswa menjadi tenaga profesional yang tersertifikasi di berbagai sektor kejuruan unggulan.</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- TKJ (FEATURED) -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="jurusan-card featured">
+                            <span class="jurusan-card-badge"><i class="fa-solid fa-star me-1"></i>Kelas Ini</span>
+                            <div class="jurusan-img-wrap" style="background: linear-gradient(135deg, #0284c7, #0ea5e9);">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </div>
+                            <div class="jurusan-body">
+                                <span class="jurusan-abbr">KOMPETENSI KEAHLIAN</span>
+                                <h3 class="jurusan-title">Teknik Komputer &amp; Jaringan</h3>
+                                <p class="jurusan-desc">
+                                    Fokus pada infrastruktur jaringan kabel &amp; nirkabel, routing switching, administrasi server Linux/Windows, cyber security, dan pemrograman.
+                                </p>
+                                <ul class="jurusan-features">
+                                    <li><i class="fa-solid fa-circle-check"></i> Lab Komputer &amp; Server Terpadu</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> MikroTik MTCNA Curriculum</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Fiber Optic Splicing</li>
+                                </ul>
+                                <a href="#members" class="btn btn-primary btn-sm mt-auto w-100 fw-bold">
+                                    Lihat Kelas XI TKJ 1
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TKR -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="jurusan-card">
+                            <div class="jurusan-img-wrap" style="background: linear-gradient(135deg, #16a34a, #22c55e);">
+                                <i class="fa-solid fa-car-side"></i>
+                            </div>
+                            <div class="jurusan-body">
+                                <span class="jurusan-abbr">KOMPETENSI KEAHLIAN</span>
+                                <h3 class="jurusan-title">Teknik Kendaraan Ringan</h3>
+                                <p class="jurusan-desc">
+                                    Keahlian di bidang otomotif modern, kelistrikan kendaraan ringan, sistem injeksi EFI, perbaikan mesin, dan manajemen bengkel.
+                                </p>
+                                <ul class="jurusan-features">
+                                    <li><i class="fa-solid fa-circle-check"></i> Bengkel Standar Industri</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Diagnosis Scanner Modern</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- KULINER -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="jurusan-card">
+                            <div class="jurusan-img-wrap" style="background: linear-gradient(135deg, #ea580c, #f97316);">
+                                <i class="fa-solid fa-utensils"></i>
+                            </div>
+                            <div class="jurusan-body">
+                                <span class="jurusan-abbr">KOMPETENSI KEAHLIAN</span>
+                                <h3 class="jurusan-title">Kuliner</h3>
+                                <p class="jurusan-desc">
+                                    Menguasai seni pengolahan makanan nusantara &amp; internasional, bakery, pastry, hygiene sanitasi, dan kewirausahaan kuliner.
+                                </p>
+                                <ul class="jurusan-features">
+                                    <li><i class="fa-solid fa-circle-check"></i> Dapur Praktik Komersial</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Produk Kreatif &amp; Tata Hidang</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TPTUP -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="jurusan-card">
+                            <div class="jurusan-img-wrap" style="background: linear-gradient(135deg, #4f46e5, #6366f1);">
+                                <i class="fa-solid fa-snowflake"></i>
+                            </div>
+                            <div class="jurusan-body">
+                                <span class="jurusan-abbr">KOMPETENSI KEAHLIAN</span>
+                                <h3 class="jurusan-title">Teknik Pendingin &amp; Tata Udara</h3>
+                                <p class="jurusan-desc">
+                                    Instalasi, pemeliharaan, dan perbaikan pendingin ruangan (AC), chiller, kulkas industri, serta sistem refrigerasi ramah lingkungan.
+                                </p>
+                                <ul class="jurusan-features">
+                                    <li><i class="fa-solid fa-circle-check"></i> Teknisi HVAC Bersertifikat</li>
+                                    <li><i class="fa-solid fa-circle-check"></i> Uji Kompetensi Terstandar</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             ABOUT XI TKJ 1 (Cyber Class Profile)
+        ========================================== -->
+        <section class="section-wrap section-bg-light" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow"><i class="fa-solid fa-info-circle"></i> TENTANG KELAS</span>
+                    <h2 class="section-title">Keluarga Besar <span>XI TKJ 1</span></h2>
+                    <p class="section-sub">Mengenal lebih dekat identitas, pilar keahlian, dan komitmen para calon network engineer dan developer SMKN 1 Kras.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 p-4 border-0 shadow-sm rounded-4 text-center">
+                            <div class="icon-wrap mx-auto mb-3 text-primary" style="font-size: 2.5rem;">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </div>
+                            <h4 class="fw-bold text-dark">Computer Networking</h4>
+                            <p class="text-muted small">
+                                Mengkaji arsitektur jaringan komputer, konfigurasi switch/router, routing dinamis (OSPF/BGP), subnetting VLSM, dan instalasi serat optik.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 p-4 border-0 shadow-sm rounded-4 text-center">
+                            <div class="icon-wrap mx-auto mb-3 text-primary" style="font-size: 2.5rem;">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <h4 class="fw-bold text-dark">Programming &amp; Web</h4>
+                            <p class="text-muted small">
+                                Membangun keterampilan pemrograman, logika algoritma, pembuatan aplikasi website, otomatisasi skrip, serta integrasi API.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 p-4 border-0 shadow-sm rounded-4 text-center">
+                            <div class="icon-wrap mx-auto mb-3 text-primary" style="font-size: 2.5rem;">
+                                <i class="fa-solid fa-shield-virus"></i>
+                            </div>
+                            <h4 class="fw-bold text-dark">Cyber &amp; System Admin</h4>
+                            <p class="text-muted small">
+                                Mengelola sistem operasi Linux Debian, DNS server, Web server Apache/Nginx, firewall MikroTik, dan pemeliharaan keamanan infrastruktur siber.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             ANGGOTA KELAS XI TKJ 1 (Members Section)
+        ========================================== -->
+        <section class="section-wrap section-bg-white" id="members">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow"><i class="fa-solid fa-users"></i> DATA ANGGOTA</span>
+                    <h2 class="section-title">Daftar Siswa <span>XI TKJ 1</span></h2>
+                    <p class="section-sub">Sebanyak 36 siswa-siswi yang terdaftar aktif dalam keluarga besar Teknik Komputer dan Jaringan 1.</p>
+                </div>
+
+                <!-- Account Status Notice -->
+                <div id="accountStatusNotice" class="alert alert-info py-2 px-3 mb-4 rounded-3 small">
+                    <i class="fa-solid fa-circle-info text-primary me-1"></i> Mode Pengunjung: Silakan <a href="portal.html?role=student" class="alert-link fw-bold">Login Siswa</a> atau <a href="portal.html?role=admin" class="alert-link fw-bold">Admin</a> untuk membuka bio profil lengkap siswa.
+                </div>
+
+                <!-- Filter & Search Toolbar -->
+                <div class="members-filter-bar">
+                    <div class="members-search-wrap">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="studentSearchInput" placeholder="Cari nama siswa, jabatan, keahlian..." aria-label="Cari siswa">
+                    </div>
+
+                    <div class="filter-pills">
+                        <button class="filter-pill active" data-filter="all" type="button">Semua (<span id="studentCountBadge">36 Siswa</span>)</button>
+                        <button class="filter-pill" data-filter="lead" type="button">Pengurus Kelas</button>
+                        <button class="filter-pill" data-filter="tech" type="button">Tim Programmer</button>
+                        <button class="filter-pill" data-filter="member" type="button">Anggota</button>
+                    </div>
+                </div>
+
+                <!-- Grid Kartu Siswa (Di-render via script.js) -->
+                <div class="members-grid" id="membersGrid">
+                    <!-- JavaScript will dynamically render student cards -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             JADWAL PELAJARAN MINGGUAN (Schedule)
+        ========================================== -->
+        <section class="section-wrap section-bg-light" id="schedule">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow"><i class="fa-solid fa-calendar-check"></i> JADWAL AKADEMIK</span>
+                    <h2 class="section-title">Jadwal Pelajaran <span>Mingguan</span></h2>
+                    <p class="section-sub">Jadwal jam kegiatan belajar mengajar kelas XI TKJ 1 SMKN 1 Kras.</p>
+                </div>
+
+                <!-- Day Tabs -->
+                <div class="schedule-nav">
+                    <button class="schedule-nav-btn active" data-day="senin" type="button">Senin</button>
+                    <button class="schedule-nav-btn" data-day="selasa" type="button">Selasa</button>
+                    <button class="schedule-nav-btn" data-day="rabu" type="button">Rabu</button>
+                    <button class="schedule-nav-btn" data-day="kamis" type="button">Kamis</button>
+                    <button class="schedule-nav-btn" data-day="jumat" type="button">Jumat</button>
+                    <button class="schedule-nav-btn" data-day="sabtu" type="button">Sabtu</button>
+                    <button class="schedule-nav-btn" data-day="minggu" type="button">Minggu</button>
+                </div>
+
+                <!-- SENIN -->
+                <div class="schedule-day-panel active" id="schedule-senin">
+                    <div class="schedule-list">
+                        <div class="schedule-item">
+                            <span class="schedule-item-num">01</span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Upacara Bendera Hari Senin</h4>
+                                <span class="schedule-item-teacher">Lapangan Utama SMKN 1 Kras</span>
+                            </div>
+                            <span class="schedule-item-time">07:00 - 07:50 WIB</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-item-num">02</span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Bahasa Indonesia</h4>
+                                <span class="schedule-item-teacher">Anang Kurniawan, S.Pd</span>
+                            </div>
+                            <span class="schedule-item-time">08:00 - 09:20 WIB</span>
+                        </div>
+                        <div class="schedule-item break">
+                            <span class="schedule-item-num"><i class="fa-solid fa-mug-hot"></i></span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Istirahat 1</h4>
+                                <span class="schedule-item-teacher">Area Kantin &amp; Lingkungan Sekolah</span>
+                            </div>
+                            <span class="schedule-item-time">10:00 - 10:15 WIB</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-item-num">03</span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Teknologi Jaringan Kabel &amp; Nirkabel (TKJ)</h4>
+                                <span class="schedule-item-teacher">Kusman Rahmanu Adi, S.T / Bekti Widhianto, S.Kom</span>
+                            </div>
+                            <span class="schedule-item-time">10:15 - 12:15 WIB</span>
+                        </div>
+                        <div class="schedule-item break">
+                            <span class="schedule-item-num"><i class="fa-solid fa-mosque"></i></span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Istirahat 2 / Sholat Dzuhur Berjamaah</h4>
+                                <span class="schedule-item-teacher">Masjid SMKN 1 Kras</span>
+                            </div>
+                            <span class="schedule-item-time">12:15 - 12:45 WIB</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-item-num">04</span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Praktikum Laboratorium Jaringan TKJ</h4>
+                                <span class="schedule-item-teacher">Doni Ardianto, S.Kom / Diana Catur K.S, S.Kom</span>
+                            </div>
+                            <span class="schedule-item-time">12:45 - 14:45 WIB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SELASA -->
+                <div class="schedule-day-panel" id="schedule-selasa">
+                    <div class="schedule-list">
+                        <div class="schedule-item">
+                            <span class="schedule-item-num">01</span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Matematika</h4>
+                                <span class="schedule-item-teacher">Basroni, S.Pd</span>
+                            </div>
+                            <span class="schedule-item-time">07:00 - 08:30 WIB</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-item-num">02</span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Bahasa Inggris</h4>
+                                <span class="schedule-item-teacher">Guru Pengampu Bahasa Inggris</span>
+                            </div>
+                            <span class="schedule-item-time">08:30 - 10:00 WIB</span>
+                        </div>
+                        <div class="schedule-item break">
+                            <span class="schedule-item-num"><i class="fa-solid fa-mug-hot"></i></span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Istirahat 1</h4>
+                                <span class="schedule-item-teacher">Istirahat &amp; Refreshing</span>
+                            </div>
+                            <span class="schedule-item-time">10:00 - 10:15 WIB</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-item-num">03</span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Administrasi Server Jaringan (Debian Linux)</h4>
+                                <span class="schedule-item-teacher">Tim Produktif TKJ</span>
+                            </div>
+                            <span class="schedule-item-time">10:15 - 11:45 WIB</span>
+                        </div>
+                        <div class="schedule-item break">
+                            <span class="schedule-item-num"><i class="fa-solid fa-mosque"></i></span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Istirahat 2 / Sholat Dzuhur</h4>
+                                <span class="schedule-item-teacher">Masjid SMKN 1 Kras</span>
+                            </div>
+                            <span class="schedule-item-time">11:45 - 12:30 WIB</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-item-num">04</span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Konfigurasi DNS &amp; Web Hosting</h4>
+                                <span class="schedule-item-teacher">Lab Komputer TKJ</span>
+                            </div>
+                            <span class="schedule-item-time">12:30 - 14:45 WIB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RABU -->
+                <div class="schedule-day-panel" id="schedule-rabu">
+                    <div class="schedule-list">
+                        <div class="schedule-item">
+                            <span class="schedule-item-num">01</span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Pemrograman Web &amp; Aplikasi</h4>
+                                <span class="schedule-item-teacher">Moh Dzul Fiqri / Tim Guru TI</span>
+                            </div>
+                            <span class="schedule-item-time">07:00 - 08:30 WIB</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-item-num">02</span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Routing Dinamik &amp; Switching L2/L3</h4>
+                                <span class="schedule-item-teacher">Lab Routerboard TKJ</span>
+                            </div>
+                            <span class="schedule-item-time">08:30 - 10:00 WIB</span>
+                        </div>
+                        <div class="schedule-item break">
+                            <span class="schedule-item-num"><i class="fa-solid fa-mug-hot"></i></span>
+                            <div class="schedule-item-info"><h4 class="schedule-item-subject">Istirahat 1</h4></div>
+                            <span class="schedule-item-time">10:00 - 10:15 WIB</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-item-num">03</span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Keamanan Jaringan Komputer (Firewall)</h4>
+                                <span class="schedule-item-teacher">Instruktur Produktif TKJ</span>
+                            </div>
+                            <span class="schedule-item-time">10:15 - 11:45 WIB</span>
+                        </div>
+                        <div class="schedule-item break">
+                            <span class="schedule-item-num"><i class="fa-solid fa-mosque"></i></span>
+                            <div class="schedule-item-info"><h4 class="schedule-item-subject">Istirahat 2 / Sholat Dzuhur</h4></div>
+                            <span class="schedule-item-time">11:45 - 12:30 WIB</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-item-num">04</span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Praktikum MikroTik RouterOS</h4>
+                                <span class="schedule-item-teacher">Lab Komputer TKJ</span>
+                            </div>
+                            <span class="schedule-item-time">12:30 - 14:45 WIB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KAMIS -->
+                <div class="schedule-day-panel" id="schedule-kamis">
+                    <div class="schedule-list">
+                        <div class="schedule-item">
+                            <span class="schedule-item-num">01</span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Pendidikan Agama &amp; Budi Pekerti</h4>
+                                <span class="schedule-item-teacher">Lu'luatul Mabruroh, S.Ag / Kurnia Silvi, S.Pd</span>
+                            </div>
+                            <span class="schedule-item-time">07:00 - 08:30 WIB</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-item-num">02</span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Pendidikan Pancasila &amp; Kewarganegaraan (PPKn)</h4>
+                                <span class="schedule-item-teacher">Binti Musafaah, S.Pd.,Gr</span>
+                            </div>
+                            <span class="schedule-item-time">08:30 - 10:00 WIB</span>
+                        </div>
+                        <div class="schedule-item break">
+                            <span class="schedule-item-num"><i class="fa-solid fa-mug-hot"></i></span>
+                            <div class="schedule-item-info"><h4 class="schedule-item-subject">Istirahat 1</h4></div>
+                            <span class="schedule-item-time">10:00 - 10:15 WIB</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-item-num">03</span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Serat Optik (Fiber Optic Splicing &amp; OTDR)</h4>
+                                <span class="schedule-item-teacher">Lab Fiber Optik TKJ</span>
+                            </div>
+                            <span class="schedule-item-time">10:15 - 11:45 WIB</span>
+                        </div>
+                        <div class="schedule-item break">
+                            <span class="schedule-item-num"><i class="fa-solid fa-mosque"></i></span>
+                            <div class="schedule-item-info"><h4 class="schedule-item-subject">Istirahat 2 / Sholat Dzuhur</h4></div>
+                            <span class="schedule-item-time">11:45 - 12:30 WIB</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-item-num">04</span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Projek Kreatif &amp; Kewirausahaan (PKK)</h4>
+                                <span class="schedule-item-teacher">Nasikin, S.E</span>
+                            </div>
+                            <span class="schedule-item-time">12:30 - 14:00 WIB</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-item-num">05</span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Bahasa Daerah / Bahasa Jawa</h4>
+                                <span class="schedule-item-teacher">Junianto, S.Pd</span>
+                            </div>
+                            <span class="schedule-item-time">14:00 - 14:45 WIB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JUMAT -->
+                <div class="schedule-day-panel" id="schedule-jumat">
+                    <div class="schedule-list">
+                        <div class="schedule-item">
+                            <span class="schedule-item-num">01</span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Senam Sehat &amp; Gerakan Sekolah Asri</h4>
+                                <span class="schedule-item-teacher">Lapangan Sekolah SMKN 1 Kras</span>
+                            </div>
+                            <span class="schedule-item-time">07:00 - 07:40 WIB</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-item-num">02</span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Pendidikan Jasmani &amp; Kesehatan</h4>
+                                <span class="schedule-item-teacher">Guru PJOK</span>
+                            </div>
+                            <span class="schedule-item-time">07:40 - 09:00 WIB</span>
+                        </div>
+                        <div class="schedule-item break">
+                            <span class="schedule-item-num"><i class="fa-solid fa-mug-hot"></i></span>
+                            <div class="schedule-item-info"><h4 class="schedule-item-subject">Istirahat</h4></div>
+                            <span class="schedule-item-time">09:00 - 09:20 WIB</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-item-num">03</span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Projek Penguatan Karakter &amp; Literasi IT</h4>
+                                <span class="schedule-item-teacher">Wali Kelas XI TKJ 1</span>
+                            </div>
+                            <span class="schedule-item-time">09:20 - 10:40 WIB</span>
+                        </div>
+                        <div class="schedule-item break">
+                            <span class="schedule-item-num"><i class="fa-solid fa-mosque"></i></span>
+                            <div class="schedule-item-info">
+                                <h4 class="schedule-item-subject">Persiapan Sholat Jumat &amp; Pulang</h4>
+                                <span class="schedule-item-teacher">Masjid SMKN 1 Kras</span>
+                            </div>
+                            <span class="schedule-item-time">10:40 - 11:30 WIB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SABTU -->
+                <div class="schedule-day-panel" id="schedule-sabtu">
+                    <div class="schedule-list">
+                        <div class="card p-5 text-center border-0 shadow-sm rounded-4">
+                            <i class="fa-solid fa-icons text-primary mb-3" style="font-size: 3rem;"></i>
+                            <h4 class="fw-bold">Kegiatan Ekstrakurikuler &amp; Pengembangan Diri</h4>
+                            <p class="text-muted">Pramuka, Futsal, PMR, Rohis, dan Komunitas Robotik / Coding SMKN 1 Kras.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MINGGU -->
+                <div class="schedule-day-panel" id="schedule-minggu">
+                    <div class="schedule-list">
+                        <div class="card p-5 text-center border-0 shadow-sm rounded-4">
+                            <i class="fa-solid fa-bed text-warning mb-3" style="font-size: 3rem;"></i>
+                            <h4 class="fw-bold">Hari Libur Akhir Pekan</h4>
+                            <p class="text-muted">Tidak ada jadwal kegiatan belajar mengajar aktif. Selamat berkumpul bersama keluarga.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             GALERI KELAS & SEKOLAH
+        ========================================== -->
+        <section class="section-wrap section-bg-white" id="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow"><i class="fa-solid fa-images"></i> DOKUMENTASI</span>
+                    <h2 class="section-title">Galeri <span>Kegiatan</span></h2>
+                    <p class="section-sub">Rekam jejak kebersamaan, pembelajaran lab komputer, dan kegiatan siswa SMKN 1 Kras.</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-card">
+                        <img src="assets/hero-slider-1.webp" alt="Kegiatan Upacara & Sekolah" loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">SEKOLAH</span>
+                            <h4 class="gallery-card-title">Peringatan Hari Besar SMKN 1 Kras</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="assets/hero-slider-2.webp" alt="Praktikum Siswa" loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">PRAKTIKUM</span>
+                            <h4 class="gallery-card-title">Simulasi Jaringan Komputer &amp; Server</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="assets/dzul.jpg" alt="Programmer XI TKJ 1" loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">CYBER CLASS</span>
+                            <h4 class="gallery-card-title">Pengembangan Portal Website Kelas</h4>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="assets/irfan.jpg" alt="Ketua Kelas XI TKJ 1" loading="lazy">
+                        <div class="gallery-card-overlay">
+                            <span class="gallery-card-badge">ORGANISASI</span>
+                            <h4 class="gallery-card-title">Kepemimpinan &amp; Kolaborasi Kelas</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PENGUMUMAN & BERITA SEKOLAH
+        ========================================== -->
+        <section class="section-wrap section-bg-light" id="news">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow"><i class="fa-solid fa-newspaper"></i> INFORMASI RESMI</span>
+                    <h2 class="section-title">Berita &amp; <span>Pengumuman</span></h2>
+                    <p class="section-sub">Informasi penting dan agenda terkini seputar SMK Negeri 1 Kras Kediri.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="news-card">
+                            <div class="news-thumb">
+                                <img src="assets/hero-slider-1.webp" alt="Pengumuman Pelaksanaan PKL">
+                                <span class="news-badge">AKADEMIK</span>
+                            </div>
+                            <div class="news-body">
+                                <span class="news-date"><i class="fa-solid fa-calendar me-1"></i>Oktober 2026</span>
+                                <h4 class="news-title">Persiapan Program Praktik Kerja Lapangan (PKL) Siswa TKJ</h4>
+                                <p class="news-excerpt">
+                                    Sosialisasi penempatan magang industri di berbagai perusahaan provider internet, software house, dan instansi jaringan.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="news-card">
+                            <div class="news-thumb">
+                                <img src="assets/hero-slider-2.webp" alt="Program MOVE TKJ">
+                                <span class="news-badge">MOVE TKJ</span>
+                            </div>
+                            <div class="news-body">
+                                <span class="news-date"><i class="fa-solid fa-calendar me-1"></i>Oktober 2026</span>
+                                <h4 class="news-title">Program MOVE: Servis Komputer &amp; Lab Gratis untuk Masyarakat</h4>
+                                <p class="news-excerpt">
+                                    Siswa-siswi TKJ SMKN 1 Kras terjun langsung membantu pemeliharaan perangkat komputer di sekolah-sekolah sekitar.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="news-card">
+                            <div class="news-thumb">
+                                <img src="assets/hero-slider-1.webp" alt="Peluncuran Website Kelas">
+                                <span class="news-badge">TEKNOLOGI</span>
+                            </div>
+                            <div class="news-body">
+                                <span class="news-date"><i class="fa-solid fa-calendar me-1"></i>Oktober 2026</span>
+                                <h4 class="news-title">Peluncuran Portal Interaktif Resmi XI TKJ 1 SMKN 1 Kras</h4>
+                                <p class="news-excerpt">
+                                    Website kelas berstandar modern dilengkapi pemutar audio belajar, jadwal otomatis real-time, dan portal autentikasi siswa.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================
+         FOOTER RESMI SMKN 1 KRAS
+    ========================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Kolom 1: Profil Sekolah -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand">
+                        <img src="assets/logo-smkn1kras.png" alt="Logo SMKN 1 Kras" onerror="this.src='https://smknegeri1kras.sch.id/uploads/logo-sekolah.png'">
+                        <div>
+                            <h3>SMKN 1 KRAS</h3>
+                            <span>KABUPATEN KEDIRI · JAWA TIMUR</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">
+                        Memberikan pendidikan berkualitas untuk menciptakan generasi yang cerdas, berkarakter, inovatif, dan siap kerja di dunia industri maupun wirausaha mandiri.
+                    </p>
+                    <div class="footer-sosmed">
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener" class="footer-sosmed-btn" style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);" title="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com" target="_blank" rel="noopener" class="footer-sosmed-btn" style="background: #ff0000;" title="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener" class="footer-sosmed-btn" style="background: #1877f2;" title="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.tiktok.com" target="_blank" rel="noopener" class="footer-sosmed-btn" style="background: #000000;" title="TikTok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kolom 2: Navigasi Cepat -->
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h4 class="footer-title">Navigasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home" class="footer-link">Beranda</a></li>
+                        <li><a href="#sambutan" class="footer-link">Kepala Sekolah</a></li>
+                        <li><a href="#jurusan" class="footer-link">Program Keahlian</a></li>
+                        <li><a href="#members" class="footer-link">Anggota Siswa</a></li>
+                        <li><a href="#schedule" class="footer-link">Jadwal Pelajaran</a></li>
+                        <li><a href="#gallery" class="footer-link">Galeri Foto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kolom 3: Layanan Digital -->
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h4 class="footer-title">Portal Sekolah</h4>
+                    <ul class="footer-links">
+                        <li><a href="portal.html?role=student" class="footer-link">Portal Siswa</a></li>
+                        <li><a href="portal.html?role=admin" class="footer-link">Portal Admin</a></li>
+                        <li><a href="https://lms.smkn1kras.sch.id/" target="_blank" class="footer-link">LMS Belajar</a></li>
+                        <li><a href="https://sdms.smkn1kras.sch.id" target="_blank" class="footer-link">SDMS Sekolah</a></li>
+                        <li><a href="https://smknegeri1kras.sch.id" target="_blank" class="footer-link">Website Utama</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kolom 4: Alamat & Kontak Resmi -->
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="footer-title">Kontak Kami</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Dsn. Demangan RT. 01 RW. 04, Desa Setonorejo, Kec. Kras, Kabupaten Kediri, Jawa Timur 64172</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@smkn1kras.sch.id / smkn1kras@gmail.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-certificate"></i>
+                        <span>NPSN: 69775452 · Akreditasi A</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 SMKN 1 KRAS. All rights reserved.</p>
+                <p>Website Resmi Kelas XI TKJ 1 · Dikelola oleh Tim IT &amp; Siswa XI TKJ 1</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="topBtn" class="top-btn" type="button" aria-label="Kembali ke atas" title="Kembali ke atas">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ==========================================
+         MEMBER PROFILE MODAL (Akses Bio Terautentikasi)
+    ========================================== -->
+    <div class="member-modal" id="memberModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalName">
+        <div class="member-modal-backdrop" data-close-member></div>
+        <div class="member-modal-card">
+            <div class="member-modal-header">
+                <button class="member-modal-close" id="memberModalClose" type="button" aria-label="Tutup modal profil">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="member-modal-avatar">
+                    <img id="modalPhoto" src="" alt="Foto Siswa">
+                </div>
+                <h3 id="modalName" class="fw-bold mb-1 text-white">Nama Siswa</h3>
+                <span id="modalRole" class="badge bg-light text-primary fw-bold px-3 py-1">Member</span>
+            </div>
+
+            <div class="member-modal-body">
+                <div class="member-modal-info-grid">
+                    <div class="member-modal-info-item">
+                        <span>No. Urut Absen</span>
+                        <strong id="modalNumber">01</strong>
+                    </div>
+                    <div class="member-modal-info-item">
+                        <span>Kelas / Jurusan</span>
+                        <strong>XI TKJ 1</strong>
+                    </div>
+                    <div class="member-modal-info-item">
+                        <span>NISN</span>
+                        <strong id="modalNisn">-</strong>
+                    </div>
+                    <div class="member-modal-info-item">
+                        <span>Sekolah</span>
+                        <strong>SMKN 1 Kras</strong>
+                    </div>
+                    <div class="member-modal-info-item full">
+                        <span>Minat &amp; Keahlian</span>
+                        <strong id="modalSkills">Networking, Linux Server</strong>
+                    </div>
+                </div>
+
+                <div class="p-3 bg-light rounded-3 mb-3 border">
+                    <span class="d-block text-muted small fw-bold text-uppercase mb-1">Motto / Profil Singkat:</span>
+                    <p id="modalBio" class="small text-secondary mb-0">Siswa aktif keluarga besar XI TKJ 1.</p>
+                </div>
+
+                <button class="btn btn-primary w-100 fw-bold" type="button" data-close-member>
+                    Tutup Profil
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         FLOATING YOUTUBE MUSIC STATION
+         (Desain Modern Cyber & High-Tech School Player)
+    ========================================== -->
+    <div class="music-player" id="musicPlayer" aria-label="Pemutar Musik XI TKJ 1 SMKN 1 Kras">
+        <!-- Expandable Video Host Container -->
+        <div class="music-video-wrapper" id="musicVideoWrapper">
+            <div id="youtubePlayer" class="youtube-player-host"></div>
+        </div>
+
+        <!-- Floating Mini Bar (Pojok Kanan Bawah) -->
+        <div class="music-top" id="musicTopBar">
+            <div class="music-disc-wrap">
+                <div class="music-disc" id="musicDisc" aria-hidden="true">
+                    <span class="music-disc-inner"></span>
+                    <i class="fa-solid fa-music music-disc-icon"></i>
+                </div>
+            </div>
+
+            <div class="music-info">
+                <div class="music-info-top">
+                    <span class="music-live-dot" id="musicLiveDot"></span>
+                    <span class="music-label" id="musicStatusBadge">STREAMING JUKEBOX</span>
+                </div>
+                <strong id="musicTitle" title="Lofi Hip Hop Radio">Lofi Hip Hop Radio</strong>
+                <small id="musicArtist">XI TKJ 1 · SMKN 1 Kras</small>
+            </div>
+
+            <!-- Mini Equalizer Bars -->
+            <div class="music-mini-eq" id="musicMiniEq" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+            </div>
+
+            <!-- Mini Direct Play Button -->
+            <button class="music-mini-play-btn" id="musicMiniPlayBtn" type="button" title="Putar / Jeda Musik" aria-label="Putar musik">
+                <i class="fa-solid fa-play"></i>
+            </button>
+
+            <!-- Mini Expand / Collapse Button -->
+            <button class="music-toggle" id="musicToggle" type="button" title="Buka panel musik" aria-expanded="false" aria-label="Buka panel musik">
+                <i class="fa-solid fa-chevron-up"></i>
+            </button>
+        </div>
+
+        <!-- Expanded Drawer / Station Panel -->
+        <div class="music-search-panel" id="musicSearchPanel">
+            <!-- Header Panel -->
+            <div class="music-search-head">
+                <div class="music-head-info">
+                    <div class="music-station-badge">
+                        <i class="fa-solid fa-headphones"></i>
+                        <span>XI TKJ 1 JUKEBOX</span>
+                    </div>
+                    <h3>Pemutar Musik &amp; Lagu</h3>
+                    <p class="music-head-sub">Putar semua lagu bebas dari YouTube tanpa batas</p>
+                </div>
+                <div class="music-head-actions">
+                    <button class="music-action-btn" id="musicToggleVideo" type="button" title="Buka / Tutup Layar Video" aria-label="Mode Video">
+                        <i class="fa-solid fa-tv"></i>
+                        <span>Video</span>
+                    </button>
+                    <button class="music-close" id="musicClose" type="button" title="Tutup panel" aria-label="Tutup panel">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Search Form -->
+            <form class="music-search-form" id="musicSearchForm" autocomplete="off">
+                <div class="music-search-input-wrap">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input id="musicSearchInput" type="search" maxlength="150" placeholder="Cari lagu apa saja, artis, atau paste link YT..." aria-label="Cari lagu">
+                    <button type="button" class="music-search-clear" id="musicSearchClear" title="Bersihkan" aria-label="Bersihkan pencarian" style="display:none;">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <button id="musicSearchSubmit" type="submit" aria-label="Mulai cari">
+                        <span>Cari</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Genre Filter Pills -->
+            <div class="music-genre-scroller" id="musicGenreScroller">
+                <div class="music-genre-tabs" id="musicGenreTabs">
+                    <button type="button" class="genre-pill active" data-genre="all">
+                        <i class="fa-solid fa-fire"></i> Semua
+                    </button>
+                    <button type="button" class="genre-pill" data-genre="indo">
+                        <i class="fa-solid fa-flag"></i> Hits Indo
+                    </button>
+                    <button type="button" class="genre-pill" data-genre="global">
+                        <i class="fa-solid fa-globe"></i> Top Global
+                    </button>
+                    <button type="button" class="genre-pill" data-genre="cyber">
+                        <i class="fa-solid fa-bolt"></i> Cyber EDM
+                    </button>
+                    <button type="button" class="genre-pill" data-genre="anime">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Anime &amp; J-Pop
+                    </button>
+                    <button type="button" class="genre-pill" data-genre="rock">
+                        <i class="fa-solid fa-guitar"></i> Rock Band
+                    </button>
+                    <button type="button" class="genre-pill" data-genre="lofi">
+                        <i class="fa-solid fa-mug-hot"></i> Lo-Fi Santai
+                    </button>
+                </div>
+            </div>
+
+            <!-- Status Banner -->
+            <div class="music-search-status" id="musicSearchStatus" role="status" aria-live="polite">
+                <i class="fa-solid fa-circle-check"></i>
+                <span id="musicStatusText">Pilih genre lagu atau cari judul apapun dari YouTube.</span>
+            </div>
+
+            <!-- Now Playing Card -->
+            <div class="music-now-card" id="musicNowPlaying">
+                <div class="music-now-media">
+                    <div class="music-now-thumb" id="musicNowThumb">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+                    <div class="music-card-eq" id="musicCardEq">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <div class="music-now-copy">
+                    <div class="music-now-meta">
+                        <span class="music-now-tag">NOW PLAYING</span>
+                        <span class="music-quality-pill" id="musicQualityPill">HQ AUDIO</span>
+                    </div>
+                    <strong id="musicNowTitle">Lofi Hip Hop Radio</strong>
+                    <small id="musicNowArtist">Pilih lagu untuk memutar</small>
+                </div>
+            </div>
+
+            <!-- Track Progress Bar & Time -->
+            <div class="music-progress-wrap">
+                <div class="music-progress-bar-container">
+                    <input type="range" id="musicProgress" min="0" max="100" value="0" step="0.1" aria-label="Progress lagu">
+                    <div class="music-progress-fill" id="musicProgressFill"></div>
+                </div>
+                <div class="music-time-row">
+                    <span id="musicCurrent">00:00</span>
+                    <span id="musicDuration">00:00</span>
+                </div>
+            </div>
+
+            <!-- Main Playback Controls Bar -->
+            <div class="music-main-controls">
+                <button class="music-btn-ctrl" id="musicShuffle" type="button" title="Acak Lagu (Shuffle)" aria-label="Acak lagu">
+                    <i class="fa-solid fa-shuffle"></i>
+                </button>
+                <button class="music-btn-ctrl step" id="musicPrev" type="button" title="Lagu sebelumnya" aria-label="Lagu sebelumnya">
+                    <i class="fa-solid fa-backward-step"></i>
+                </button>
+                <button class="music-btn-play" id="musicPlay" type="button" title="Putar / Jeda" aria-label="Putar lagu">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+                <button class="music-btn-ctrl step" id="musicNext" type="button" title="Lagu berikutnya" aria-label="Lagu berikutnya">
+                    <i class="fa-solid fa-forward-step"></i>
+                </button>
+                <button class="music-btn-ctrl" id="musicRepeat" type="button" title="Ulangi Lagu (Repeat)" aria-label="Ulangi lagu">
+                    <i class="fa-solid fa-repeat"></i>
+                    <span class="repeat-indicator" id="repeatIndicator" style="display:none;">1</span>
+                </button>
+            </div>
+
+            <!-- Volume Control & Song Count -->
+            <div class="music-volume-row">
+                <div class="music-volume-ctrl">
+                    <button type="button" class="volume-btn" id="volumeMuteBtn" title="Mute / Unmute" aria-label="Mute">
+                        <i class="fa-solid fa-volume-high" id="volumeIcon"></i>
+                    </button>
+                    <input type="range" id="musicVolume" min="0" max="1" step="0.01" value="0.7" aria-label="Volume">
+                    <span class="volume-val" id="musicVolumeText">70%</span>
+                </div>
+                <span class="music-result-count-badge" id="musicResultCount">24 lagu</span>
+            </div>
+
+            <!-- Search / Playlist Results -->
+            <div class="music-results-header">
+                <span><i class="fa-solid fa-list-ul"></i> Daftar Putar &amp; Hasil</span>
+                <small id="musicListSubtitle">Klik lagu untuk memutar</small>
+            </div>
+            <div class="music-search-results" id="musicSearchResults"></div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Project Scripts -->
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+    <script src="youtube-api/youtube-config.js"></script>
+    <script src="youtube-api/youtube-search.js"></script>
+    <script src="youtube-api/youtube-player.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Login | SMKN 1 KRAS - XI TKJ 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+
+<main class="portal-wrap">
+  <section class="portal-card">
+    <div class="brand">
+      <img src="assets/logo-smkn1kras.png" alt="Logo SMKN 1 Kras" class="brand-logo" onerror="this.src='https://smknegeri1kras.sch.id/uploads/logo-sekolah.png'">
+      <div>
+        <strong>SMKN 1 KRAS</strong>
+        <small>PORTAL KELAS XI TKJ 1</small>
+      </div>
+    </div>
+
+    <div class="portal-head">
+      <span class="portal-badge"><i class="fa-solid fa-shield-halved"></i> SECURE SCHOOL ACCESS</span>
+      <h1>Portal <span>Autentikasi</span></h1>
+      <p>Masuk menggunakan akun Siswa untuk melihat detail bio profil anggota kelas, atau akun Admin untuk pengelolaan.</p>
+    </div>
+
+    <div class="role-tabs" role="tablist">
+      <button class="role active" data-role="student" type="button">
+        <i class="fa-solid fa-user-graduate"></i>
+        <span>
+          <b>SISWA</b>
+          <small>Akses bio profil anggota</small>
+        </span>
+      </button>
+      <button class="role" data-role="admin" type="button">
+        <i class="fa-solid fa-user-shield"></i>
+        <span>
+          <b>ADMIN</b>
+          <small>Akses pengelola sistem</small>
+        </span>
+      </button>
+    </div>
+
+    <div id="roleHint" class="role-hint">Gunakan salah satu akun siswa untuk membuka akses profil lengkap.</div>
+
+    <form id="loginForm" autocomplete="on">
+      <div class="form-group">
+        <label for="username">Username / ID Siswa</label>
+        <div class="input-wrap">
+          <i class="fa-solid fa-user"></i>
+          <input id="username" name="username" required autocomplete="username" placeholder="Contoh: siswa001">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="input-wrap">
+          <i class="fa-solid fa-lock"></i>
+          <input id="password" name="password" type="password" required autocomplete="current-password" placeholder="Contoh: password001">
+          <button id="showPassword" type="button" aria-label="Tampilkan password" title="Lihat password">
+            <i class="fa-solid fa-eye"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="loginMessage" class="message" aria-live="polite"></div>
+
+      <button class="login-btn" type="submit">
+        <i class="fa-solid fa-right-to-bracket"></i> Masuk Sekarang
+      </button>
+    </form>
+
+    <!-- Quick Demo Helper -->
+    <div class="demo-box">
+      <div class="demo-header">
+        <i class="fa-solid fa-key"></i>
+        <strong id="demoText">Akun Uji Coba Cepat (Klik untuk isi)</strong>
+      </div>
+      <div class="demo-buttons">
+        <button type="button" class="demo-btn" id="demoStudentBtn">
+          <i class="fa-solid fa-user"></i> Isi: Siswa (siswa001)
+        </button>
+        <button type="button" class="demo-btn" id="demoAdminBtn">
+          <i class="fa-solid fa-shield"></i> Isi: Admin (admin)
+        </button>
+      </div>
+    </div>
+
+    <div class="portal-footer">
+      <a class="back-link" href="index.html" id="backToSite">
+        <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda SMKN 1 Kras
+      </a>
+    </div>
+  </section>
+</main>
+
+<script src="student-accounts.js"></script>
+<script src="portal-auth.js"></script>
+</body>
+</html>
